@@ -19,7 +19,7 @@ int getNextPrime(int begin)
         int i, j, prime1;
         for (i = begin + 1; true; i++){
                 bool flag = 1;
-                for (j=2; j <=i; j++){
+                for (j=2; j <=(i / 2); j++){
                         if (i % j == 0){
                                 flag = 0;
                         }
