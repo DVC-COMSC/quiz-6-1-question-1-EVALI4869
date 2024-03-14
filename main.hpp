@@ -1,17 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int getTwoValues(int&, int&);
+void getTwoValues(int&, int&);
 int getNextPrime(int);
 int getPrevPrime(int);
 
-int getTwoValues(int &begin, int &end)
+void getTwoValues(int &begin, int &end)
 {
-    cin >> begin >> end;
-        if (begin > end){
-                return 1;
-        }
-        return 0;
+    do {
+        cin >> begin >> end;
+    }while (begin > end);
 }
 
 int getNextPrime(int begin)
