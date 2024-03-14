@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int getTwoValues(int, int);
+int getTwoValues(int&, int&);
 int getNextPrime(int);
 int getPrevPrime(int);
 
-int getTwoValues(int begin, int end)
+int getTwoValues(int &begin, int &end)
 {
     cin >> begin >> end;
         if (begin > end){
@@ -17,9 +17,9 @@ int getTwoValues(int begin, int end)
 int getNextPrime(int begin)
 {
         int i, j, prime1;
-        for (i = begin; true; i++){
+        for (i = begin + 1; true; i++){
                 bool flag = 1;
-                for (j=2; j <=(i / 2); j++){
+                for (j=2; j <=i; j++){
                         if (i % j == 0){
                                 flag = 0;
                         }
@@ -35,7 +35,7 @@ int getNextPrime(int begin)
 int getPrevPrime(int end)
 {
     int i, j, prime2;
-    for (i = end; true; i--){
+    for (i = end - 1; true; i--){
             bool flag = 1;
             for (j=2; j <=(i / 2); j++){
                     if (i % j == 0){
